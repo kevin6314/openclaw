@@ -51,7 +51,7 @@ RUN chown -R node:node /app
 # The node:22-bookworm image includes a 'node' user (uid 1000)
 # This reduces the attack surface by preventing container escape via root privileges
 RUN mkdir -p /data/.openclaw /data/workspace && chown -R node:node /data
-USER node
+# USER node
 
 # Start gateway server with default config.
 # Binds to loopback (127.0.0.1) by default for security.
